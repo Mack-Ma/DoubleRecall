@@ -1,4 +1,4 @@
-var trialNumber = 4;
+var trialNumber = 8;
 
 // define the site that hosts stimuli images
 var repo_site = "https://bobodeligong.github.io/DemoContinuousReport/";
