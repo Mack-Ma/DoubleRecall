@@ -6,12 +6,12 @@
  **/
 
 
-jsPsych.plugins["continuous_report_second"] = (function() {
+jsPsych.plugins["continuous_report_double"] = (function() {
 
   var plugin = {};
 
   plugin.info = {
-    name: 'continuous_report_second',
+    name: 'continuous_report_double',
     description: 'Uses Snap.svg to implement the continuous report task',
     parameters: {
       stimulus: {

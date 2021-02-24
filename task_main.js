@@ -87,7 +87,7 @@ show_clickable_nav: true
 timeline.push(instructions_study);
 
 
-var emotion_induction ={
+/* var emotion_induction ={
   type: 'image-keyboard-response',
   // stimulus: jsPsych.timelineVariable('emotion_stimulus'),
   stimulus: repo_site +'images/stim/emotion1.png',
@@ -100,6 +100,7 @@ var emotion_induction ={
   //}
 };
 timeline.push(emotion_induction);
+*/
 
 /* study trials */
 var fixationWhite = {
@@ -166,8 +167,8 @@ var delay ={
 	trial_duration: 1000
 }
 
-var testBlockOne = {
-    type: 'continuous_report_first',
+var testBlock = {
+    type: 'continuous_report',
     stimulus: jsPsych.timelineVariable('stimulus'),
     colIndex: jsPsych.timelineVariable('colIndex'),
     probLocIndex: jsPsych.timelineVariable('probLocIndex'),
@@ -179,8 +180,8 @@ var testBlockOne = {
     }
 };
 
-var testBlockTwo = {
-  type: 'continuous_report_second',
+var doubleTestBlock = {
+  type: 'continuous_report_double',
   stimulus: jsPsych.timelineVariable('stimulus'),
   colIndex: jsPsych.timelineVariable('colIndex'),
   probLocIndex: jsPsych.timelineVariable('probLocIndex'),
@@ -192,9 +193,8 @@ var testBlockTwo = {
   }
 };
 
-
 var test_procedure = {
-      timeline: [fixationWhite, studyBlock, delay, testBlockOne, testBlockTwo],
+      timeline: [fixationWhite, studyBlock, delay, testBlock, doubleTestBlock],
       //timeline: [emotion_induction, fixationWhite, studyBlock, delay, testBlock],
 	    timeline_variables: stimuliIndex,
 
