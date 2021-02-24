@@ -16,6 +16,12 @@ var colIndex=[];
       colIndex[j]=[Math.floor(Math.random()*360), Math.floor(Math.random()*360)]
       };
 
+// randomize probe locations
+var probLocIndex = [];
+      for (k = 0; k<trialNumber; k++){
+        probLocIndex[k] = Math.floor(Math.random()*2)
+      };
+
 // Probably would want to randomize the stimuli, but for the demo, setting the stimulus order and the "correct" colors:
 /*var color_study_order = {
 
@@ -39,7 +45,7 @@ var colIndex=[];
   var stimuliOrder = {
     image:[1,2,3,4],
     colIndex: colIndex,
-    probLocIndex:[0,1,0,1],
+    probLocIndex: probLocIndex,
   }
 
 // study block stimuli
