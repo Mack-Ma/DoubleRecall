@@ -49,11 +49,13 @@ var instructions_practice = {
 	// pages: ['PRACTICE </br></br> Each image will appear one by one. Study the color of each image. You will be asked to recall the colors later.</br></br>' +
 //'Ready? </br></br>'],
   pages:['<p>Instruction</p><p>This task should take about 1 hour. First, you will see two color squares presented side by side, like this:</p>'+
-  '<p align="center"><img src="studySample.png" width="400" border=1></p>'+
+  //'<p align="center"><img src="studySample.png" width="400" border=1></p>'+
   '<p>Please remember their colors. These color squares will be shown briefly, and then disappear. Then you will be asked to report the color of one of them. In this example, the left square is probed. To do so, you will use your mouse to change the color of a circle (moving the mouse around the circle will change the color using a color wheel). In this case, you should report that the color of the probed square is like this: </p>'+
-  '<p align="center"><img src="probeLeftSample.png" width="400" border=1></p>'+
-  '<p>Once you have decided the color, you will click you mouse to lock your answer in and move to report the color of another square like this:</p>'+
-  '<p align="center"><img src="probeRightSample.png" width="400" border=1></p><p>Now let’s practice a little bit.</p>'],
+  //'<p align="center"><img src="probeLeftSample.png" width="400" border=1></p>'+
+  //'<p>Once you have decided the color, you will click you mouse to lock your answer in and move to report the color of another square like this:</p>'+
+  '<p>Once you have decided the color, you will click you mouse to lock your answer in and move to report the color of another square like this:</p>'
+  //'<p align="center"><img src="probeRightSample.png" width="400" border=1></p><p>Now let’s practice a little bit.</p>'
+],
 show_clickable_nav: true
 
 };
