@@ -9,8 +9,8 @@ var all_images = [repo_site + 'images/stim/1.svg',
 //repo_site + 'images/stim/2.svg',
 //repo_site + 'images/stim/3.svg',
 //repo_site + 'images/stim/4.svg',
-//repo_site + 'images/stim/emotion1.png',
-repo_site + 'images/stim/studySample.png',
+repo_site + 'images/stim/emotion1.png',
+//repo_site + 'images/stim/studySample.png',
 //repo_site + 'images/stim/probeLeftSample.png',
 //repo_site + 'images/stim/probeRightSample.png'
 ];
