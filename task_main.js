@@ -11,8 +11,8 @@ var all_images = [repo_site + 'images/stim/1.svg',
 //repo_site + 'images/stim/4.svg',
 //repo_site + 'images/stim/emotion1.png',
 repo_site + 'images/stim/studySample.png',
-//repo_site + 'images/stim/probeLeftSample.png',
-//repo_site + 'images/stim/probeRightSample.png'
+repo_site + 'images/stim/probeLeftSample.png',
+repo_site + 'images/stim/probeRightSample.png'
 ];
 
 // practice part
@@ -57,18 +57,21 @@ show_clickable_nav: true
 };
 */
 
+/*
 var instructions_practice1 = {
   type:'instructions',
-  pages: ['Instruction </br></br> This task should take about 1 hour. First, you will see two color squares presented side by side, like this: </br></br>' ],
+  pages: ['Welcome to the experiment. </br></br> This task should take about 1 hour. First, you will see two color squares presented side by side, like this: </br></br>'+
+'<img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/studySample.png"></img>'],
   show_clickable_nav: true
 };
 timeline.push(instructions_practice1);
+*/
 
 var instructions_practice2 = {
   type: 'instructions',
   pages: [
-      'Welcome to the experiment. Click next to begin.',
-      'Here is a picture of what you will do: <img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/studySample.png"></img>'
+      'Welcome to the experiment. </br></br> This task should take about 1 hour.</br></br>Click next to show instruction.',
+      'First, you will see two color squares presented side by side, like this: </br></br><img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/studySample.png"></img>'
   ],
   show_clickable_nav: true
 };
