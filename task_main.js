@@ -64,7 +64,7 @@ var instructions_practice1 = {
 };
 timeline.push(instructions_practice1);
 
-var trial = {
+var instructions_practice2 = {
   type: 'instructions',
   pages: [
       'Welcome to the experiment. Click next to begin.',
