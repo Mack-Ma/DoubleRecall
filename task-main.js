@@ -224,7 +224,7 @@ var stimuliIndex =[];
 /* create timeline */
 // var timeline = [];
 
-// Instructions for Study Task
+/* Instructions for Study Task
 var instructions_study = {
 	type : 'instructions',
 	pages: ['DEMO STUDY TASK </br></br> Each image will appear one by one. Study the color of each image. You will be asked to recall the colors later.</br></br>' +
@@ -233,7 +233,7 @@ show_clickable_nav: true
 
 };
 timeline.push(instructions_study);
-
+*/
 
 /* var emotion_induction ={
   type: 'image-keyboard-response',
