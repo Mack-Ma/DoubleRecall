@@ -1,5 +1,5 @@
 var trialNumberPrac = 2;
-var trialNumber = 8;
+var trialNumber = 2;
 
 // define the site that hosts stimuli images
 var repo_site = "https://bobodeligong.github.io/DoubleRecall/";
@@ -349,3 +349,12 @@ var test_procedure = {
 }
 timeline.push(test_procedure);
   /* var timeline = [instructions_study, study_procedure, instructions_test, test_procedure]; */
+
+  var exp_end = {
+    type: 'instructions',
+    pages: [
+        'Thank you for your participation!</br></br>If you have any questions, please contact lyang147@ucr.edu.'
+      ],
+    show_clickable_nav: true
+  };
+  timeline.push(exp_end);
