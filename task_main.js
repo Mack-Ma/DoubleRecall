@@ -2,7 +2,7 @@ var trialNumberPrac = 6;
 var trialNumber = 8;
 
 // define the site that hosts stimuli images
-var repo_site = "https://bobodeligong.github.io/DemoContinuousReport/";
+var repo_site = "https://bobodeligong.github.io/DoubleRecall/";
 
 // location of the images.
 var all_images = [repo_site + 'images/stim/1.svg',
@@ -45,7 +45,7 @@ var stimuliIndexPrac =[];
   var timeline = [];
 
 // Instructions for Practice part
-var instructions_practice = {
+/*var instructions_practice = {
 	type : 'instructions',
 	 pages: ['PRACTICE </br></br> Each image will appear one by one. Study the color of each image. You will be asked to recall the colors later.</br></br>' +
 'Ready? </br></br>'],
@@ -55,7 +55,24 @@ var instructions_practice = {
 show_clickable_nav: true
 
 };
-timeline.push(instructions_practice);
+*/
+
+var instructions_practice1 = {
+  type:'instructions',
+  pages: ['Instruction </br></br> This task should take about 1 hour. First, you will see two color squares presented side by side, like this: </br></br>' ],
+  show_clickable_nav: true
+};
+timeline.push(instructions_practice1);
+
+/*var trial = {
+  type: 'instructions',
+  pages: [
+      'Welcome to the experiment. Click next to begin.',
+      'Here is a picture of what you will do: <img src=""></img>'
+  ],
+  show_clickable_nav: true
+}
+*/
 
 var fixationWhitePrac = {
 	type: 'html-keyboard-response',
