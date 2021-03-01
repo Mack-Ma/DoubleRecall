@@ -64,15 +64,15 @@ var instructions_practice1 = {
 };
 timeline.push(instructions_practice1);
 
-/*var trial = {
+var trial = {
   type: 'instructions',
   pages: [
       'Welcome to the experiment. Click next to begin.',
-      'Here is a picture of what you will do: <img src=""></img>'
+      'Here is a picture of what you will do: <img src= all_images[1]></img>'
   ],
   show_clickable_nav: true
-}
-*/
+};
+timeline.push(instructions_practice2);
 
 var fixationWhitePrac = {
 	type: 'html-keyboard-response',
