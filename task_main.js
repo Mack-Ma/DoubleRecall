@@ -1,4 +1,4 @@
-var trialNumberPrac = 6;
+var trialNumberPrac = 2;
 var trialNumber = 8;
 
 // define the site that hosts stimuli images
@@ -142,7 +142,14 @@ var studyBlockPrac = {
 }
 timeline.push(prac_procedure);
 
-
+var instructions_end = {
+  type: 'instructions',
+  pages: [
+      'This is the end of the practice. Please click Next to move on to the main experiment.'
+    ],
+  show_clickable_nav: true
+};
+timeline.push(instructions_end);
 
 // Main experiment part
       // randomize color index pairs
