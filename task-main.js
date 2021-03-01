@@ -271,6 +271,7 @@ var studyBlock = {
       data: {
         stimulus: jsPsych.timelineVariable('stimulus'),
         colIndex: jsPsych.timelineVariable('colIndex'),
+        test_part: 'encoding',
       }
   };
 
@@ -312,7 +313,8 @@ var delay ={
 	stimulus: '<div style="font-size:60px;">+</div>',
 	data: {mainExp_part: 'delay'},
 	choices: jsPsych.NO_KEYS,
-	trial_duration: 1000
+	trial_duration: 1000,
+  test_part: 'delay',
 }
 
 var testBlock = {
@@ -325,6 +327,7 @@ var testBlock = {
       stimulus: jsPsych.timelineVariable('stimulus'),
       colIndex: jsPsych.timelineVariable('colIndex'),
       probLocIndex: jsPsych.timelineVariable('probLocIndex'),
+      test_part: 'firstProbe',
     }
 };
 
@@ -338,6 +341,7 @@ var doubleTestBlock = {
     stimulus: jsPsych.timelineVariable('stimulus'),
     colIndex: jsPsych.timelineVariable('colIndex'),
     probLocIndex: jsPsych.timelineVariable('probLocIndex'),
+    test_part: 'secondProbe',
   }
 };
 
