@@ -68,7 +68,7 @@ var trial = {
   type: 'instructions',
   pages: [
       'Welcome to the experiment. Click next to begin.',
-      'Here is a picture of what you will do: <img src= all_images[1]></img>'
+      'Here is a picture of what you will do: <img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/studySample.png"></img>'
   ],
   show_clickable_nav: true
 };
