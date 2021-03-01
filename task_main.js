@@ -49,7 +49,7 @@ var stimuliIndexPrac =[];
 	type : 'instructions',
 	 pages: ['PRACTICE </br></br> Each image will appear one by one. Study the color of each image. You will be asked to recall the colors later.</br></br>' +
 'Ready? </br></br>'],
-  // pages:[`<p>Instruction</p><p>This task should take about 1 hour. First, you will see two color squares presented side by side, like this:</p><p align="center"><img src="studySample.png" width="400" border=1></p><p>Please remember their colors. These color squares will be shown briefly, and then disappear. Then you will be asked to report the color of one of them. In this example, the left square is probed. To do so, you will use your mouse to change the color of a circle (moving the mouse around the circle will change the color using a color wheel). In this case, you should report that the color of the probed square is like this: </p><p align="center"><img src="probeLeftSample.png" width="400" border=1></p><p>Once you have decided the color, you will click you mouse to lock your answer in and move to report the color of another square like this:</p><p align="center"><img src="probeRightSample.png" width="400" border=1></p><p>Now let’s practice a little bit.</p>`
+  // pages:[`<p>Instruction</p><p>This task should take about 1 hour. First, you will see two color squares presented side by side, like this:</p><p align="center"><img src="studySample.png" width="400" border=1></p><p>Please remember their colors. These color squares will be shown briefly, and then disappear. Then you will be asked to report the color of one of them. In this example, the left square is probed. To do so, you will use your mouse to change the color of a circle (moving the mouse around the circle will change the color using a color wheel). In this case, you should report that the color of the probed square is like this: </p><p align="center"><img src="probeLeftSample.png" width="400" border=1></p><p>Once you have decided the color, you will click you mouse to lock your answer in. Then you will move to report the color of another square like this:</p><p align="center"><img src="probeRightSample.png" width="400" border=1></p><p>Now let’s practice a little bit.</p>`
   //pages:[`<p>Instruction</p><p>This task should take about 1 hour. First, you will see two color squares presented side by side, like this:</p><p>Please remember their colors. These color squares will be shown briefly, and then disappear. Then you will be asked to report the color of one of them. In this example, the left square is probed. To do so, you will use your mouse to change the color of a circle (moving the mouse around the circle will change the color using a color wheel). In this case, you should report that the color of the probed square is like this: </p><p>Once you have decided the color, you will click you mouse to lock your answer in and move to report the color of another square like this:</p><p>Now let’s practice a little bit.</p>`
 //],
 show_clickable_nav: true
@@ -67,15 +67,17 @@ var instructions_practice1 = {
 timeline.push(instructions_practice1);
 */
 
-var instructions_practice2 = {
+var instructions_practice = {
   type: 'instructions',
   pages: [
       'Welcome to the experiment. </br></br> This task should take about 1 hour.</br></br>Click next to show instruction.',
-      'First, you will see two color squares presented side by side, like this: </br></br><img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/studySample.png"></img>'
-  ],
+      'First, you will see two color squares presented side by side, like this: </br></br><img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/studySample.png"></img></br><br>Please remember their colors. These color squares will be shown briefly, and then disappear.',
+      'Then you will be asked to report the color of one of them.</br></br>In this example, the left square is probed.</br></br>To do so, you will use your mouse to change the color of a circle (moving the mouse around the circle will change the color using a color wheel).</br></br>In this case, you should report that the color of the probed square is like this:</br></br><img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/probeLeftSample.png"></img></br></br>Once you have decided the color, you will click your mouse to lock your answer in.',
+      'Then you will move to report the color of another square like this:</br></br><img src= "https://bobodeligong.github.io/DoubleRecall/images/stim/probeRightSample.png"></img></br><br>Now let’s practice a little bit.'
+    ],
   show_clickable_nav: true
 };
-timeline.push(instructions_practice2);
+timeline.push(instructions_practice);
 
 var fixationWhitePrac = {
 	type: 'html-keyboard-response',
