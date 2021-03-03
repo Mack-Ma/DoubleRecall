@@ -1,5 +1,5 @@
-var trialNumberPrac = 2;
-var trialNumber = 2;
+var trialNumberPrac = 10;
+var trialNumber = 200;
 
 // define the site that hosts stimuli images
 var repo_site = "https://bobodeligong.github.io/DoubleRecall/";
