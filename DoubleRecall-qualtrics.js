@@ -15,7 +15,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
     // requiredResources must include all the JS files that demo-simple-rt-task-transformed.html uses.
     var requiredResources = [
         task_github + "libraries/jspsych.js",
-        task_github + "libraries/jquery-min.js",
+        task_github + "libraries/jquery-min.js", // if not work, mouse cannot be tracked
         task_github + "libraries/Snap.svg-0.5.1/dist/snap.svg.js",
         task_github + "plugins/jspsych-continuous-report.js",
         task_github + "plugins/jspsych-continuous-report-double.js",
@@ -23,8 +23,8 @@ Qualtrics.SurveyEngine.addOnload(function () {
         task_github + "plugins/jspsych-html-keyboard-response.js",
         task_github + "plugins/jspsych-instructions.js",
         task_github + "colors.js",
-        task_github + "css/jspsych.css",
-        task_github + "css/custom.css",
+        //task_github + "css/jspsych.css",
+        //task_github + "css/custom.css",
         task_github + "task-main.js",
     ];
 
@@ -44,9 +44,9 @@ Qualtrics.SurveyEngine.addOnload(function () {
     }
 
     /* Change 3: Appending the display_stage Div using jQuery */
-    // jQuery is loaded in Qualtrics by default
-    //jQuery("<div id = 'display_stage_background'></div>").appendTo('body');
-    //jQuery("<div id = 'display_stage'></div>").appendTo('body');
+    // jQuery is loaded in Qualtrics by default; if not, the background cannot be changed
+    jQuery("<div id = 'display_stage_background'></div>").appendTo('body');
+    jQuery("<div id = 'display_stage'></div>").appendTo('body');
 
     /* Change 4: Wrapping jsPsych.init() in a function */
     function initExp() {
@@ -55,7 +55,8 @@ Qualtrics.SurveyEngine.addOnload(function () {
             timeline: timeline,
             preload_images: all_images, // this speeds things up.
             show_preload_progress_bar: false, 
-            //display_element: 'display_stage',
+            display_element: 'display_stage',
+            fullscreen: true,
             on_finish: function (data) {
                 /* Change 5: Summarizing and save the results to Qualtrics */
                 // summarize the results
@@ -75,8 +76,8 @@ Qualtrics.SurveyEngine.addOnload(function () {
 
                 /* Change 6: Adding the clean up and continue functions.*/
                 // clear the stage
-                //jQuery('#display_stage').remove();
-                //jQuery('#display_stage_background').remove();
+                jQuery('#display_stage').remove();
+                jQuery('#display_stage_background').remove();
 
                 // simulate click on Qualtrics "next" button, making use of the Qualtrics JS API
                 qthis.clickNextButton();

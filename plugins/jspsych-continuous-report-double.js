@@ -73,7 +73,7 @@ jsPsych.plugins["continuous_report_double"] = (function() {
 
     // get the image file location
     //var currStim = 'images/stim/' + trial.stimulus + '.svg';
-    var currStim = 'images/stim/1.svg';
+    var currStim = 'https://bobodeligong.github.io/DoubleRecall/images/stim/1.svg';
 
 
 
