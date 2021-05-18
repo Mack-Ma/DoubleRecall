@@ -1,5 +1,5 @@
-var trialNumberPrac = 10;
-var trialNumber = 200;
+var trialNumberPrac = 1;
+var trialNumber = 2;
 
 
 // define the site that hosts stimuli images
