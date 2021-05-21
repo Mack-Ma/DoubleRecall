@@ -82,7 +82,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
                 });
                 var secondResponseRT = secondProbeTrials.select('rt');
                 var secondResponseError = secondProbeTrials.select('responseError');
-                var secondProbeLocation = secondProbeTrials.select('probLocIndex');
+                
                 
                 
 
@@ -93,7 +93,6 @@ Qualtrics.SurveyEngine.addOnload(function () {
                 Qualtrics.SurveyEngine.setEmbeddedData("firstProbeLocation", firstProbeLocation);
                 Qualtrics.SurveyEngine.setEmbeddedData("firstResponseError", firstResponseError);
                 Qualtrics.SurveyEngine.setEmbeddedData("secondResponseRT", secondResponseRT);
-                Qualtrics.SurveyEngine.setEmbeddedData("secondProbeLocation", secondProbeLocation);
                 Qualtrics.SurveyEngine.setEmbeddedData("secondResponseError", secondResponseError);
 
                 /* Change 6: Adding the clean up and continue functions.*/
