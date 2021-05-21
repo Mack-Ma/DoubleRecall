@@ -60,18 +60,40 @@ Qualtrics.SurveyEngine.addOnload(function () {
             on_finish: function (data) {
                 /* Change 5: Summarizing and save the results to Qualtrics */
                 // summarize the results
+                var colIndexDisplay =jsPsych.data.get().filter({
+                    test_part: 'encoding',
+                });
+                var colIndexPresented = colIndexDisplay.select('colIndex');
+ 
+                var delayDisplay = jsPsych.data.get().filter({
+                    test_part: 'delay',
+                });
+                var categoryEncodingPeriod = delayDisplay.select('trial_duration');
+
                 var firstProbeTrials = jsPsych.data.get().filter({
                     test_part: 'firstProbe',
                 });
+                var firstResponseRT = firstProbeTrials.select('rt');
+                var firstResponseError = firstProbeTrials.select('responseError');
+                var firstProbeLocation = firstProbeTrials.select('probLocIndex');
+                
                 var secondProbeTrials = jsPsych.data.get().filter({
                     test_part: 'secondProbe',
                 });
-                var firstResponseError = firstProbeTrials.select('responseError');
+                var secondResponseRT = secondProbeTrials.select('rt');
                 var secondResponseError = secondProbeTrials.select('responseError');
+                var secondProbeLocation = secondProbeTrials.select('probLocIndex');
+                
                 
 
                 // save to qualtrics embedded data
+                Qualtrics.SurveyEngine.setEmbeddedData("colIndexPresented", colIndexPresented);
+                Qualtrics.SurveyEngine.setEmbeddedData("categoryEncodingPeriod", categoryEncodingPeriod);
+                Qualtrics.SurveyEngine.setEmbeddedData("firstResponseRT", firstResponseRT);
+                Qualtrics.SurveyEngine.setEmbeddedData("firstProbeLocation", firstProbeLocation);
                 Qualtrics.SurveyEngine.setEmbeddedData("firstResponseError", firstResponseError);
+                Qualtrics.SurveyEngine.setEmbeddedData("secondResponseRT", secondResponseRT);
+                Qualtrics.SurveyEngine.setEmbeddedData("secondProbeLocation", secondProbeLocation);
                 Qualtrics.SurveyEngine.setEmbeddedData("secondResponseError", secondResponseError);
 
                 /* Change 6: Adding the clean up and continue functions.*/
