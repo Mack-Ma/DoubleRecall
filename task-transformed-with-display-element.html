@@ -10,7 +10,7 @@
 
         <!-- load the jspsych custom plugins.   -->
         <script src="plugins/jspsych-continuous-report.js"></script>
-        <script src="plugins/jspsych-continuous-report-double.js"></script>
+        <script src="plugins/jspsych-maskrecall.js"></script>
         <script src="plugins/jspsych-snap-keyboard-response.js"></script>
 
         <!-- load other jspsych plugins used in this demo.   -->
@@ -50,7 +50,7 @@
           z-index: -1;
           color: white
         }
-    
+
         #display_stage {
           position: fixed;
           left: 1vw;
@@ -79,7 +79,7 @@
 	jsPsych.init({
 		timeline: timeline,
 		preload_images: all_images, // this speeds things up.
-	  show_preload_progress_bar: false, 
+	  show_preload_progress_bar: false,
     display_element: 'display_stage',
 		on_finish: function() {
        jsPsych.data.displayData(); // if you want to display the data at the end for debugging purposes.

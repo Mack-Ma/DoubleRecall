@@ -68,7 +68,7 @@ var instructions_practice1 = {
 timeline.push(instructions_practice1);
 */
 
-var instructions_practice = {
+/*var instructions_practice = {
   type: 'instructions',
   pages: [
       'Welcome to the experiment. </br></br> This task should take about 1 hour.</br></br>Click next to show instruction.',
@@ -78,7 +78,7 @@ var instructions_practice = {
     ],
   show_clickable_nav: true
 };
-timeline.push(instructions_practice);
+timeline.push(instructions_practice);*/
 
 var fixationWhitePrac = {
 	type: 'html-keyboard-response',
@@ -89,7 +89,7 @@ var fixationWhitePrac = {
 
 }
 
-var studyBlockPrac = {
+/*var studyBlockPrac = {
       type: 'snap-keyboard-response',
       stimulus: jsPsych.timelineVariable('stimulus'),
       colIndex: jsPsych.timelineVariable('colIndex'),
@@ -108,7 +108,7 @@ var studyBlockPrac = {
     choices: jsPsych.NO_KEYS,
     trial_duration: 1000
   }
-  
+
   var testBlockPrac = {
       type: 'continuous_report',
       stimulus: jsPsych.timelineVariable('stimulus'),
@@ -121,7 +121,7 @@ var studyBlockPrac = {
         probLocIndex: jsPsych.timelineVariable('probLocIndex'),
       }
   };
-  
+
   var doubleTestBlockPrac = {
     type: 'continuous_report_double',
     stimulus: jsPsych.timelineVariable('stimulus'),
@@ -150,7 +150,7 @@ var instructions_end = {
     ],
   show_clickable_nav: true
 };
-timeline.push(instructions_end);
+timeline.push(instructions_end);*/
 
 // Main experiment part
       // randomize color index pairs
@@ -173,13 +173,13 @@ var probLocIndex = [];
     // colIndex: [[87,97], [171,181], [327,337], [291,301]], // these refer to the index of the "correct" color within colors.js, the first index means the left one, the second index means the right one
     colIndex: colIndex,
   };
-  
+
   // Probably would want to randomize the stimuli, but for the demo, setting the stimulus order and the "correct" colors:
   var color_test_order = {
-  
+
     image: [1,2,3,4], // i.e. images/stim/1.svg, iamges/stim/2.svg, etc.
     //colIndex: [87,171,327,291], // these refer to the index of the "correct" color within colors.js
-    //colIndex: [[87,97], [171,181], [327,337], [291,301]], 
+    //colIndex: [[87,97], [171,181], [327,337], [291,301]],
     colIndex: color_study_order.colIndex,
     probLocIndex: [0,1,0,1],
   };
@@ -298,7 +298,7 @@ show_clickable_nav: true
 timeline.push(instructions_test);
 */
 
-/* test trials 
+/* test trials
 var fixationWhite = {
 	type: 'html-keyboard-response',
 	stimulus: '<div style="font-size:60px;">+</div>',
@@ -358,7 +358,7 @@ timeline.push(test_procedure);
   var exp_end = {
     type: 'instructions',
     pages: [
-        'Thank you for your participation!</br></br>If you have any questions, please contact lyang147@ucr.edu.'
+        'Thank you for your participation!</br></br>If you have any questions, please contact mack.ma@email.ucr.edu.'
       ],
     show_clickable_nav: true
   };

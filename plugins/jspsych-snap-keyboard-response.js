@@ -1,4 +1,4 @@
-/**
+ /**
 
 * plugin for presenting svg images, using the snap.io plugin.
 * written by Victoria J.H. Ritvo, 2019
@@ -71,6 +71,7 @@ jsPsych.plugins["snap-keyboard-response"] = (function() {
     // get the current stimulus's file location
     var currStim = 'images/stim/' + trial.stimulus + '.svg';
 
+    var nsample = 3；
     var svgWidth = 600;
     var svgHeight = 600;
 
@@ -86,17 +87,23 @@ jsPsych.plugins["snap-keyboard-response"] = (function() {
     rgbCol = colors.colors[trial.colIndex];
     var currHexColor = Snap.rgb(rgbCol[0], rgbCol[1], rgbCol[2]);
     */
-
-   rgbColLeft = colors.colors[trial.colIndex[0]];
+    colorList=[];
+    for (sampleID=0, sampleID<nsample; sampleID++){
+      rgbCol = colors.colors[trial.colIndex[sampleID]];
+      colorList[sampleID] = Snap.rgb(rgbColLeft[0], rgbColLeft[1], rgbColLeft[2]);
+    }
+   /*rgbColLeft = colors.colors[trial.colIndex[0]];
    var currHexColorLeft = Snap.rgb(rgbColLeft[0], rgbColLeft[1], rgbColLeft[2]);
 
    rgbColRight = colors.colors[trial.colIndex[1]];
    var currHexColorRight = Snap.rgb(rgbColRight[0], rgbColRight[1], rgbColRight[2]);
-
+*/
     // create the snap paper
     var paper = Snap("#svg");
 
-
+    function getRndInteger(min, max) { // this function sets a random number between min and max, inclusive
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     // // % set the image position based on svg paper dimensions.
     // this may have to be changed depending on the size of the image. The demo images are 100 x 100.
@@ -107,17 +114,28 @@ jsPsych.plugins["snap-keyboard-response"] = (function() {
     // this may have to be changed depending on the size of the image. The demo images are 100 x 100.
 
      //var imageXLeft = centerXSVG - 100 / 2-100;
-
-    // create the left rectangular
+    radiusha=100;
+     for (let i = 0; i < nsample; i++) {
+       var sampleLocationAngle = getRndInteger(1, 359);
+       sampleLocationY[i] = Math.sin(sampleLocationAngle*Math.PI/180)*radiusha;
+       sampleLocationX[i] = Math.cos(sampleLocationAngle*Math.PI/180)*radiusha;
+     }
+     colorSquareAll = [];
+     for (let i = 0; i < nsample; i++) {
+       colorSquareAll[i] = paper.rect(centerXSVG + sampleLocationX[i], centerYSVG-sampleLocationY[i], 100, 100).attr({
+         fill: colorList[i]
+       })
+     }
+    /*// create the left rectangular
     var colorSquareLeft = paper.rect(centerXSVG-150, centerYSVG-50, 100, 100).attr({
       fill: currHexColorLeft
     })
-    
+
     // create the right rectangular
     var colorSquareRight = paper.rect(centerXSVG+50, centerYSVG-50, 100, 100).attr({
       fill: currHexColorRight
     })
-
+*/
     /* load in the images
     var g = paper.group();
 
